@@ -4,7 +4,7 @@ let
   pkgs = import sources.nixpkgs {};
 
   # TODO detect whether MPI version will work on a given computer and adjust
-  raxml  = pkgs.callPackage ./nix/raxml { mpi = true; };
+  raxml  = pkgs.callPackage ../raxml-nix { mpi = true; };
 
   myPython2 = pkgs.python27Packages // rec {
     fastcluster        = pkgs.python27Packages.callPackage ./nix/pydeps/fastcluster {};
