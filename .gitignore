@@ -72,3 +72,6 @@ makefile
 
 # IntelliJ
 *.iml
+
+# vim
+*.sw*
