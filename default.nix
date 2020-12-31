@@ -2,7 +2,6 @@
 { fetchurl
 , makeWrapper
 , pyyaml
-, biopython
 , cython
 , dendropy
 , futures
@@ -25,6 +24,7 @@
 , phylo_utils
 
 # edited version packaged with ortholang
+, biopython
 , raxml
 
 }:
@@ -90,9 +90,9 @@ in python.mkDerivation {
    ];
 
   # TODO remove?
-  preConfigure = ''
-    export PATH=${raxml}/bin:$PATH
-  '';
+  # preConfigure = ''
+  #   export PATH=${raxml}/bin:$PATH
+  # '';
 
   # TODO patch to use MPI before AVX or regular?
   patches = [

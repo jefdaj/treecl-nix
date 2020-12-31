@@ -4,6 +4,7 @@ let
   pkgs = import sources.nixpkgs {};
 
   # TODO detect whether MPI version will work on a given computer and adjust
+  # TODO is this messing up the build?
   raxml  = pkgs.callPackage ../raxml-nix { mpi = true; };
 
   # TODO there's probably a withPackages function for this right?
