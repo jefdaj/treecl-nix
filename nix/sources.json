@@ -11,6 +11,18 @@
         "url": "https://github.com/nmattia/niv/archive/9d35b9e4837ab88517210b1701127612c260eccf.tar.gz",
         "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
     },
+    "raxml": {
+        "branch": "master",
+        "description": null,
+        "homepage": "www.exelixis-lab.org",
+        "owner": "jefdaj",
+        "repo": "raxml-nix",
+        "rev": "2c23befaa6c560bdd84a2cadadfa8923dc310434",
+        "sha256": "1a7nqlacnpj8g4x0gx9d8syiq72mz9pcidnsic13kv9b8bqjkj7z",
+        "type": "tarball",
+        "url": "https://github.com/jefdaj/raxml-nix/archive/2c23befaa6c560bdd84a2cadadfa8923dc310434.tar.gz",
+        "url_template": "https://github.com/<owner>/<repo>/archive/<rev>.tar.gz"
+    },
     "nixpkgs": {
         "branch": "release-20.09",
         "description": "Nix Packages collection",

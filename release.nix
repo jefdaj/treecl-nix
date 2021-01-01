@@ -5,7 +5,7 @@ let
 
   # TODO detect whether MPI version will work on a given computer and adjust
   # TODO is this messing up the build?
-  raxml  = pkgs.callPackage ../raxml-nix { mpi = true; };
+  raxml  = pkgs.callPackage sources.raxml { mpi = true; };
 
   # TODO there's probably a withPackages function for this right?
   myPython2 = pkgs.python27Packages // rec {
