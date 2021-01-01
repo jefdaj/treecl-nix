@@ -20,14 +20,15 @@ let
     scikit-bio         = pkgs.python27Packages.callPackage ./nix/pydeps/scikit-bio {
       inherit CacheControl natsort;
     };
-
-    treeCl = pkgs.python27Packages.callPackage ./default.nix {
-      inherit raxml; # TODO why doesn't it find this?
-      inherit biopython;
-      inherit fastcluster fasttree tree_distance progressbar-latest CacheControl scikit-bio phylo_utils;
-      inherit (pkgs.python27Packages) pyyaml cython dendropy futures;
-      inherit (pkgs.python27Packages) matplotlib nose numpy pandas progressbar scikitlearn scipy;
-    };
   };
+
+  treeCl = myPython2.callPackage ./default.nix {
+    inherit raxml; # TODO why doesn't it find this?
+    inherit (myPython2) biopython;
+    inherit (myPython2) fastcluster fasttree tree_distance progressbar-latest CacheControl scikit-bio phylo_utils;
+    inherit (myPython2) pyyaml cython dendropy futures;
+    inherit (myPython2) matplotlib nose numpy pandas progressbar scikitlearn scipy;
+  };
+
 in
-  pkgs.python27Packages.callPackage myPython2.treeCl {}
+  treeCl

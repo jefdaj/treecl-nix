@@ -14,6 +14,8 @@
 , scikitlearn
 , scipy
 
+, buildPythonPackage
+
 # packaged with ortholang
 , fastcluster
 , fasttree
@@ -47,7 +49,7 @@ let
   # scikit-bio         = pkgs.python27Packages.callPackage ../scikit-bio { inherit CacheControl; };
   # phylo_utils        = pkgs.python27Packages.callPackage ../phylo_utils {};
 
-in python.mkDerivation rec {
+in buildPythonPackage rec {
   name = "treecl-${version}";
   version = "0.1.37";
   src = ./.;
@@ -102,6 +104,9 @@ in python.mkDerivation rec {
 
   # TODO remove specific tests like in natsort rather than disabling them all
   doCheck = false;
+
+  # turns out no need for this, because the error is happening after that phase:
+  # dontUsePythonImportsCheck = true;
 
   # TODO remove now that it propagates?
   # TODO remove if preConfigure handles it
