@@ -75,3 +75,6 @@ makefile
 
 # vim
 *.sw*
+
+# nix
+result*
