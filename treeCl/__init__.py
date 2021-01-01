@@ -1,5 +1,9 @@
 from __future__ import absolute_import
 
+# quiet down matplotlib
+import logging
+logging.getLogger('matplotlib').setLevel(logging.WARNING)
+
 from .alignment import Alignment
 from .clustering import Spectral, Hierarchical, MultidimensionalScaling, Automatic, Evaluation
 from .collection import Collection, Scorer
