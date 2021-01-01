@@ -47,8 +47,9 @@ let
   # scikit-bio         = pkgs.python27Packages.callPackage ../scikit-bio { inherit CacheControl; };
   # phylo_utils        = pkgs.python27Packages.callPackage ../phylo_utils {};
 
-in python.mkDerivation {
-  name = "treecl-0.1.36";
+in python.mkDerivation rec {
+  name = "treecl-${version}";
+  version = "0.1.37";
   src = ./.;
   # src = fetchurl {
   #   url = "https://github.com/kgori/treeCl/archive/0.1.36.tar.gz";
