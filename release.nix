@@ -31,4 +31,6 @@ let
   };
 
 in
+  # this can be built with nix-build release.nix,
+  # and you can get a python that imports it with nix-shell release.nix
   treeCl
