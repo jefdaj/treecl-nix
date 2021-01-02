@@ -98,9 +98,9 @@ in buildPythonPackage rec {
   # '';
 
   # TODO patch to use MPI before AVX or regular?
-  patches = [
-    ./uncomment-binary.patch # TODO check with the author that this is OK
-  ];
+  # patches = [
+  #   ./uncomment-binary.patch # TODO check with the author that this is OK
+  # ];
 
   # TODO remove specific tests like in natsort rather than disabling them all
   doCheck = false;
